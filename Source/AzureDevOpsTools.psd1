@@ -68,6 +68,7 @@
         'Get-AdoVariableGroups',
         'Get-PipelineTransition',
         'Remove-AdoGitRepoWritePermissions',
+        'Remove-AdoGitRepoWritePermissionsAll',
         'Update-AdoVariables'
     )
 

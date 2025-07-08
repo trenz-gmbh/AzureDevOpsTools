@@ -93,6 +93,21 @@ function Remove-AdoGitRepoWritePermissions
     & "$PSScriptRoot\Remove-AdoGitRepoWritePermissions.ps1" @PSBoundParameters
 }
 
+function Remove-AdoGitRepoWritePermissionsAll
+{
+    param (
+        [Parameter(Mandatory)]
+        [string]
+        $OrgName,
+
+        [Parameter()]
+        [switch]
+        $Confirm
+    )
+
+    & "$PSScriptRoot\Remove-AdoGitRepoWritePermissionsAll.ps1" @PSBoundParameters
+}
+
 function Update-AdoVariables
 {
     param (
@@ -133,4 +148,5 @@ Export-ModuleMember -Function Get-AdoPoolJobs
 Export-ModuleMember -Function Get-AdoPoolAgents
 Export-ModuleMember -Function Get-AdoVariableGroups
 Export-ModuleMember -Function Remove-AdoGitRepoWritePermissions
+Export-ModuleMember -Function Remove-AdoGitRepoWritePermissionsAll
 Export-ModuleMember -Function Update-AdoVariables

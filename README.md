@@ -147,12 +147,32 @@ Remove all write permissions from the ACL of the repository "MyRepo" in project 
   The name of the Azure DevOps project where the git repository is located.
 * RepoName (mandatory)  
   The name of the Azure DevOps git repository where the permissions should be changed.
-* Confirm (optional)  
+* Confirm (optional)
   If this is set, the script won't ask the user for confirmation before changing the permissions.
 
 ### PAT Permissions
 
 * Azure DevOps PAT token permissions: __Code: read__, __Identity: read__ and __Security: manage__
+
+
+## Remove-AdoGitRepoWritePermissionsAll
+
+Removes all write permissions from every repository in all projects of an organisation.
+
+### Usage
+
+Remove write permissions on all repositories in organisation "myorganisation".
+
+```powershell
+.\Remove-AdoGitRepoWritePermissionsAll.ps1 -OrgName "myorganisation"
+```
+
+### Parameters
+
+* OrgName (mandatory)
+  The name of the Azure DevOps organisation to use.
+* Confirm (optional)
+  If this is set, the script won't ask the user for confirmation before changing the permissions.
 
 
 ## Get-AdoVariableGroups
